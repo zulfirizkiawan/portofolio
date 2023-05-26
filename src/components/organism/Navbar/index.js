@@ -17,23 +17,6 @@ export default function Navbar() {
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#ecf0f3");
   const [linkColor, setLinkColor] = useState("#1f2937");
-  // const [position, setPosition] = useState('fixed')
-  // const router = useRouter();
-
-  // useEffect(() => {
-  //   if (
-  //     router.asPath === '/property' ||
-  //     router.asPath === '/crypto' ||
-  //     router.asPath === '/netflix' ||
-  //     router.asPath === '/twitch'
-  //   ) {
-  //     setNavBg('transparent');
-  //     setLinkColor('#ecf0f3');
-  //   } else {
-  //     setNavBg('#ecf0f3');
-  //     setLinkColor('#1f2937');
-  //   }
-  // }, [router]);
 
   const handleNav = () => {
     setNav(!nav);
@@ -218,14 +201,18 @@ export default function Navbar() {
                     <FaGithub />
                   </div>
                 </a>
-                <Link href="/#contact">
+                <a
+                  href="https://www.instagram.com/seanzulfi/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <div
                     onClick={() => setNav(!nav)}
                     className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
                   >
                     <FaInstagramSquare />
                   </div>
-                </Link>
+                </a>
                 <Link href="/resume">
                   <div
                     onClick={() => setNav(!nav)}

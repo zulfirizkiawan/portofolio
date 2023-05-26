@@ -1,6 +1,9 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/organism/Navbar";
+import MainBanner from "@/components/organism/MainBanner";
+import About from "@/components/organism/About";
+import Skill from "@/components/organism/Skill";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,6 +17,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+      <MainBanner />
+      <About />
+      <Skill />
     </>
   );
 }
