@@ -1,22 +1,16 @@
+import ContactItem from "@/components/molecules/ContactItem";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
-import {
-  FaGithub,
-  FaInstagram,
-  FaInstagramSquare,
-  FaLinkedinIn,
-} from "react-icons/fa";
-import { BsFillPersonLinesFill, BsPersonLinesFill } from "react-icons/bs";
+import { useEffect, useRef, useState } from "react";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import logo from "../../../../public/assets/logo.svg";
 import logoMobile from "../../../../public/assets/logoMobile.svg";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState("#ecf0f3");
-  const [linkColor, setLinkColor] = useState("#1f2937");
+  const [navBg, setNavBg] = useState("#f8fbfd");
+  const [linkColor, setLinkColor] = useState("#173A56");
 
   const handleNav = () => {
     setNav(!nav);
@@ -32,6 +26,13 @@ export default function Navbar() {
     };
     window.addEventListener("scroll", handleShadow);
   }, []);
+
+  const sectionRef = useRef(null);
+
+  const handleMenuClick = (id) => {
+    const target = document.querySelector(id);
+    target.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div
@@ -51,34 +52,22 @@ export default function Navbar() {
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
             <li className="ml-10 text-sm font-medium uppercase group hover:border-b hover:text-[#173A56] hover:font-bold">
-              <Link href="/" legacyBehavior>
-                Home
-              </Link>
+              <a onClick={() => handleMenuClick("#home")}>Home</a>
             </li>
             <li className="ml-10 text-sm font-medium uppercase group hover:border-b hover:text-[#173A56] hover:font-bold">
-              <Link href="/#about" legacyBehavior>
-                About
-              </Link>
+              <a onClick={() => handleMenuClick("#about")}>About</a>
             </li>
             <li className="ml-10 text-sm font-medium uppercase group hover:border-b hover:text-[#173A56] hover:font-bold">
-              <Link href="/#skills" legacyBehavior>
-                Skills
-              </Link>
+              <a onClick={() => handleMenuClick("#skill")}>Skills</a>
             </li>
             <li className="ml-10 text-sm font-medium uppercase group hover:border-b hover:text-[#173A56] hover:font-bold">
-              <Link href="/#projects" legacyBehavior>
-                Projects
-              </Link>
+              <a onClick={() => handleMenuClick("#project")}>Projects</a>
             </li>
             <li className="ml-10 text-sm font-medium uppercase group hover:border-b hover:text-[#173A56] hover:font-bold">
-              <Link href="/resume" legacyBehavior>
-                Resume
-              </Link>
+              <a href="/resume">Resume</a>
             </li>
             <li className="ml-10 text-sm font-medium uppercase group hover:border-b hover:text-[#173A56] hover:font-bold">
-              <Link href="/#contact" legacyBehavior>
-                Contact
-              </Link>
+              <a onClick={() => handleMenuClick("#contact")}>Contact</a>
             </li>
           </ul>
           {/* Hamburger Icon */}
@@ -109,10 +98,8 @@ export default function Navbar() {
         >
           <div>
             <div className="flex w-full items-center justify-between">
-              <Link href="/" legacyBehavior>
-                <a>
-                  <Image src={logoMobile} alt="/" />
-                </a>
+              <Link href="/">
+                <Image src={logoMobile} alt="/" />
               </Link>
               <div
                 onClick={handleNav}
@@ -129,99 +116,48 @@ export default function Navbar() {
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
-              <Link href="/" legacyBehavior>
-                <li
-                  onClick={() => setNav(false)}
-                  className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
-                >
-                  Home
-                </li>
-              </Link>
-              <Link href="/#about" legacyBehavior>
-                <li
-                  onClick={() => setNav(false)}
-                  className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
-                >
-                  About
-                </li>
-              </Link>
-              <Link href="/#skills" legacyBehavior>
-                <li
-                  onClick={() => setNav(false)}
-                  className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
-                >
-                  Skills
-                </li>
-              </Link>
-              <Link href="/#projects" legacyBehavior>
-                <li
-                  onClick={() => setNav(false)}
-                  className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
-                >
-                  Projects
-                </li>
-              </Link>
-              <Link href="/resume" legacyBehavior>
-                <li
-                  onClick={() => setNav(false)}
-                  className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
-                >
-                  Resume
-                </li>
-              </Link>
-              <Link href="/#contact" legacyBehavior>
-                <li
-                  onClick={() => setNav(false)}
-                  className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
-                >
-                  Contact
-                </li>
-              </Link>
+              <li
+                onClick={() => setNav(false)}
+                className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
+              >
+                <a onClick={() => handleMenuClick("#home")}>Home</a>
+              </li>
+              <li
+                onClick={() => setNav(false)}
+                className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
+              >
+                <a onClick={() => handleMenuClick("#about")}>About</a>
+              </li>
+              <li
+                onClick={() => setNav(false)}
+                className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
+              >
+                <a onClick={() => handleMenuClick("#skill")}>Skill</a>
+              </li>
+              <li
+                onClick={() => setNav(false)}
+                className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
+              >
+                <a onClick={() => handleMenuClick("#project")}>Projects</a>
+              </li>
+              <li
+                onClick={() => setNav(false)}
+                className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
+              >
+                Resume
+              </li>
+              <li
+                onClick={() => setNav(false)}
+                className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
+              >
+                <a onClick={() => handleMenuClick("#contact")}>Contact</a>
+              </li>
             </ul>
             <div className="pt-10">
               <p className="uppercase tracking-widest text-[#5651e5]">
                 Let&#39;s Connect
               </p>
-              <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                <a
-                  href="https://www.linkedin.com/in/clint-briley-50056920a/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <FaLinkedinIn />
-                  </div>
-                </a>
-                <a
-                  href="https://github.com/zulfirizkiawan"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <FaGithub />
-                  </div>
-                </a>
-                <a
-                  href="https://www.instagram.com/seanzulfi/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <div
-                    onClick={() => setNav(!nav)}
-                    className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
-                  >
-                    <FaInstagramSquare />
-                  </div>
-                </a>
-                <Link href="/resume">
-                  <div
-                    onClick={() => setNav(!nav)}
-                    className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300"
-                  >
-                    <BsFillPersonLinesFill />
-                  </div>
-                </Link>
-              </div>
+              <ContactItem />
             </div>
           </div>
         </div>
