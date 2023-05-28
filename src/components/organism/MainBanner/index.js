@@ -1,8 +1,4 @@
-import ContactItem from "@/components/molecules/ContactItem";
-import Link from "next/link";
-import React from "react";
-import { BsFillPersonLinesFill } from "react-icons/bs";
-import { FaGithub, FaInstagramSquare, FaLinkedinIn } from "react-icons/fa";
+import { ContactItem } from "@/components/molecules";
 
 export default function MainBanner() {
   return (

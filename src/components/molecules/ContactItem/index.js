@@ -1,7 +1,7 @@
 import Link from "next/link";
-import React from "react";
+import { AiFillInstagram } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import { FaGithub, FaInstagramSquare, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 export default function ContactItem() {
   return (
@@ -11,8 +11,8 @@ export default function ContactItem() {
         target="_blank"
         rel="noreferrer"
       >
-        <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-          <FaLinkedinIn />
+        <div className="bg-[#018AD2] rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-105 ease-in duration-300">
+          <FaLinkedinIn className="text-white" size={25} />
         </div>
       </a>
       <a
@@ -20,8 +20,8 @@ export default function ContactItem() {
         target="_blank"
         rel="noreferrer"
       >
-        <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-          <FaGithub />
+        <div className="bg-[#8D32AB] rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-105 ease-in duration-300">
+          <FaGithub className="text-white" size={25} />
         </div>
       </a>
       <a
@@ -29,13 +29,13 @@ export default function ContactItem() {
         target="_blank"
         rel="noreferrer"
       >
-        <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-          <FaInstagramSquare />
+        <div className="bg-[#F44B5B] rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-105 ease-in duration-300">
+          <AiFillInstagram className="text-white" size={25} />
         </div>
       </a>
       <Link href="/resume">
-        <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-          <BsFillPersonLinesFill />
+        <div className="bg-[#028E37] rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+          <BsFillPersonLinesFill className="text-white" size={20} />
         </div>
       </Link>
     </div>

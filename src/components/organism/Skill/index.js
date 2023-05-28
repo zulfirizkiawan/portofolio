@@ -1,6 +1,4 @@
 import SkillItem from "@/components/molecules/SkillItem";
-import Image from "next/image";
-import React from "react";
 import {
   Css,
   Github,
@@ -11,7 +9,6 @@ import {
   ReactNative,
   Tailwind,
 } from "../../../../public/assets";
-// import javascript from "../../../../public/assets/skills/javascript.png";
 
 export default function Skill() {
   return (
@@ -21,7 +18,8 @@ export default function Skill() {
           Skills
         </p>
         <h2 className="py-4">Apa yang saya bisa lakukan</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="w-[13%] bg-[#035B81] h-2" />
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pt-5">
           <SkillItem imgSkill={Javascript} title="javascript" />
           <SkillItem imgSkill={ReactNative} title="React Native" />
           <SkillItem imgSkill={Nextjs} title="Next Js" />

@@ -1,15 +1,16 @@
-import ContactItem from "@/components/molecules/ContactItem";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import logo from "../../../../public/assets/logo.svg";
 import logoMobile from "../../../../public/assets/logoMobile.svg";
+import { ContactItem } from "@/components/molecules";
+import { HiOutlineDownload } from "react-icons/hi";
 
-export default function Navbar() {
+export default function Navbar({ type }) {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState("#f8fbfd");
+  const [navBg, setNavBg] = useState("#FFFFFF");
   const [linkColor, setLinkColor] = useState("#173A56");
 
   const handleNav = () => {
@@ -31,7 +32,9 @@ export default function Navbar() {
 
   const handleMenuClick = (id) => {
     const target = document.querySelector(id);
-    target.scrollIntoView({ behavior: "smooth" });
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -44,32 +47,61 @@ export default function Navbar() {
       }
     >
       <div className="flex justify-between items-center w-full h-full px-10 2xl:px-16">
-        <Link href="/" legacyBehavior>
-          <a>
-            <Image src={logo} alt="/" className="cursor-pointer" />
-          </a>
+        <Link href="/">
+          <Image src={logo} alt="/" className="cursor-pointer" />
         </Link>
         <div>
-          <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
-            <li className="ml-10 text-sm font-medium uppercase group hover:border-b hover:text-[#173A56] hover:font-bold">
-              <a onClick={() => handleMenuClick("#home")}>Home</a>
-            </li>
-            <li className="ml-10 text-sm font-medium uppercase group hover:border-b hover:text-[#173A56] hover:font-bold">
-              <a onClick={() => handleMenuClick("#about")}>About</a>
-            </li>
-            <li className="ml-10 text-sm font-medium uppercase group hover:border-b hover:text-[#173A56] hover:font-bold">
-              <a onClick={() => handleMenuClick("#skill")}>Skills</a>
-            </li>
-            <li className="ml-10 text-sm font-medium uppercase group hover:border-b hover:text-[#173A56] hover:font-bold">
-              <a onClick={() => handleMenuClick("#project")}>Projects</a>
-            </li>
-            <li className="ml-10 text-sm font-medium uppercase group hover:border-b hover:text-[#173A56] hover:font-bold">
-              <a href="/resume">Resume</a>
-            </li>
-            <li className="ml-10 text-sm font-medium uppercase group hover:border-b hover:text-[#173A56] hover:font-bold">
-              <a onClick={() => handleMenuClick("#contact")}>Contact</a>
-            </li>
-          </ul>
+          {type === 1 ? (
+            <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
+              <li className="ml-10 text-base font-medium  group hover:border-b hover:text-[#173A56] hover:font-bold">
+                <a onClick={() => handleMenuClick("#home")}>Home</a>
+              </li>
+              <li className="ml-10 text-base font-medium  group hover:border-b hover:text-[#173A56] hover:font-bold">
+                <a onClick={() => handleMenuClick("#about")}>About</a>
+              </li>
+              <li className="ml-10 text-base font-medium  group hover:border-b hover:text-[#173A56] hover:font-bold">
+                <a onClick={() => handleMenuClick("#skill")}>Skills</a>
+              </li>
+              <li className="ml-10 text-base font-medium  group hover:border-b hover:text-[#173A56] hover:font-bold">
+                <a onClick={() => handleMenuClick("#project")}>Projects</a>
+              </li>
+              <li className="flex items-center ml-10 text-base font-medium  group hover:border-b hover:text-[#173A56] hover:font-bold">
+                <a href="#">Resume</a>
+                <HiOutlineDownload
+                  className="pl-1 group hover:text-[#173A56] "
+                  size={20}
+                />
+              </li>
+              <li className="ml-10 text-base font-medium  group hover:border-b hover:text-[#173A56] hover:font-bold">
+                <a onClick={() => handleMenuClick("#contact")}>Contact</a>
+              </li>
+            </ul>
+          ) : (
+            <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
+              <li className="ml-10 text-base font-medium  group hover:border-b hover:text-[#173A56] hover:font-bold">
+                <Link href="/">Home</Link>
+              </li>
+              <li className="ml-10 text-base font-medium  group hover:border-b hover:text-[#173A56] hover:font-bold">
+                <Link href="/#about">About</Link>
+              </li>
+              <li className="ml-10 text-base font-medium  group hover:border-b hover:text-[#173A56] hover:font-bold">
+                <Link href="/#skill">Skill</Link>
+              </li>
+              <li className="ml-10 text-base font-medium  group hover:border-b hover:text-[#173A56] hover:font-bold">
+                <Link href="/#project">Project</Link>
+              </li>
+              <li className="flex items-center ml-10 text-base font-medium  group hover:border-b hover:text-[#173A56] hover:font-bold">
+                <Link href="#">Resume</Link>
+                <HiOutlineDownload
+                  className="pl-1 group hover:text-[#173A56] "
+                  size={20}
+                />
+              </li>
+              <li className="ml-10 text-base font-medium  group hover:border-b hover:text-[#173A56] hover:font-bold">
+                <Link href="/#contact">Contact</Link>
+              </li>
+            </ul>
+          )}
           {/* Hamburger Icon */}
           <div
             style={{ color: `${linkColor}` }}
@@ -109,50 +141,103 @@ export default function Navbar() {
               </div>
             </div>
             <div className="border-b border-gray-300 my-4">
-              <p className="w-[85%] md:w-[90%] py-4">
-                Work for money and customer satisfaction
+              <p className="w-full md:w-full py-4">
+                Bekerja untuk uang & kepuasan pelanggan
               </p>
             </div>
           </div>
           <div className="py-4 flex flex-col">
-            <ul className="uppercase">
-              <li
-                onClick={() => setNav(false)}
-                className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
-              >
-                <a onClick={() => handleMenuClick("#home")}>Home</a>
-              </li>
-              <li
-                onClick={() => setNav(false)}
-                className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
-              >
-                <a onClick={() => handleMenuClick("#about")}>About</a>
-              </li>
-              <li
-                onClick={() => setNav(false)}
-                className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
-              >
-                <a onClick={() => handleMenuClick("#skill")}>Skill</a>
-              </li>
-              <li
-                onClick={() => setNav(false)}
-                className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
-              >
-                <a onClick={() => handleMenuClick("#project")}>Projects</a>
-              </li>
-              <li
-                onClick={() => setNav(false)}
-                className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
-              >
-                Resume
-              </li>
-              <li
-                onClick={() => setNav(false)}
-                className="py-4 text-sm group hover:text-[#173A56] hover:font-medium"
-              >
-                <a onClick={() => handleMenuClick("#contact")}>Contact</a>
-              </li>
-            </ul>
+            {type === 1 ? (
+              <ul className="uppercase">
+                <li
+                  onClick={() => setNav(false)}
+                  className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
+                >
+                  <a onClick={() => handleMenuClick("#home")}>Home</a>
+                </li>
+                <li
+                  onClick={() => setNav(false)}
+                  className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
+                >
+                  <a onClick={() => handleMenuClick("#about")}>About</a>
+                </li>
+                <li
+                  onClick={() => setNav(false)}
+                  className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
+                >
+                  <a onClick={() => handleMenuClick("#skill")}>Skill</a>
+                </li>
+                <li
+                  onClick={() => setNav(false)}
+                  className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
+                >
+                  <a onClick={() => handleMenuClick("#project")}>Projects</a>
+                </li>
+                <li
+                  onClick={() => setNav(false)}
+                  className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
+                >
+                  Resume
+                </li>
+                <li
+                  onClick={() => setNav(false)}
+                  className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
+                >
+                  <a onClick={() => handleMenuClick("#contact")}>Contact</a>
+                </li>
+              </ul>
+            ) : (
+              <ul className="uppercase">
+                <Link href="/">
+                  <li
+                    onClick={() => setNav(false)}
+                    className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
+                  >
+                    Home
+                  </li>
+                </Link>
+                <Link href="/#about">
+                  <li
+                    onClick={() => setNav(false)}
+                    className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
+                  >
+                    About
+                  </li>
+                </Link>
+                <Link href="/#skill">
+                  <li
+                    onClick={() => setNav(false)}
+                    className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
+                  >
+                    Skills
+                  </li>
+                </Link>
+                <Link href="/#project">
+                  <li
+                    onClick={() => setNav(false)}
+                    className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
+                  >
+                    Projects
+                  </li>
+                </Link>
+                <Link href="#">
+                  <li
+                    onClick={() => setNav(false)}
+                    className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
+                  >
+                    Resume
+                  </li>
+                </Link>
+                <Link href="/#contact">
+                  <li
+                    onClick={() => setNav(false)}
+                    className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
+                  >
+                    Contact
+                  </li>
+                </Link>
+              </ul>
+            )}
             <div className="pt-10">
               <p className="uppercase tracking-widest text-[#5651e5]">
                 Let&#39;s Connect

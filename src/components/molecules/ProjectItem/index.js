@@ -5,7 +5,7 @@ import netflix from "../../../../public/assets/project/web/netflix.jpg";
 
 export default function ProjectItem({ imgProject, title, projectUrl }) {
   return (
-    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 group hover:bg-gradient-to-r from-[#069557] to-[#02897A]">
+    <div className=" bg-white relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 group hover:bg-gradient-to-r from-[#069557] to-[#02897A]">
       <Image
         src={imgProject}
         alt="/"
