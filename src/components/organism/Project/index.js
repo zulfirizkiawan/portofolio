@@ -2,8 +2,10 @@ import { ProjectItem } from "@/components/molecules";
 import { Crypto, Netflix, Property, Twitch } from "../../../../public/assets";
 import { useState } from "react";
 
-export default function Project() {
+export default function Project(props) {
   const [activeCategory, setActiveCategory] = useState("all");
+
+  console.log("props.", props.dataProjects);
 
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
@@ -11,31 +13,37 @@ export default function Project() {
 
   const projects = [
     {
+      id: 0,
       title: "Netflix",
       imgProject: Netflix,
-      projectUrl: "/property",
+      projectUrl: "/ProjectDetail",
       category: "all",
     },
     {
+      id: 1,
       title: "Twitch",
       imgProject: Twitch,
-      projectUrl: "/property",
+      projectUrl: "/ProjectDetail",
       category: "mobile",
     },
     {
+      id: 2,
       title: "Crypto",
       imgProject: Crypto,
-      projectUrl: "/property",
+      projectUrl: "/ProjectDetail",
       category: "web",
     },
     {
+      id: 3,
       title: "Property",
       imgProject: Property,
-      projectUrl: "/property",
+      projectUrl: "/ProjectDetail",
       category: "all",
     },
     // ... daftar project lainnya
   ];
+
+  console.log("project", projects);
 
   const filteredProjects =
     activeCategory === "all"
@@ -76,7 +84,7 @@ export default function Project() {
         <div className="grid md:grid-cols-3 gap-8 pt-2">
           {filteredProjects.map((project, index) => (
             <ProjectItem
-              key={index}
+              key={project.id}
               title={project.title}
               imgProject={project.imgProject}
               projectUrl={project.projectUrl}
@@ -86,4 +94,44 @@ export default function Project() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const dataProjects = [
+    {
+      id: 0,
+      title: "Netflix",
+      imgProject: Netflix,
+      projectUrl: "/projectDetail",
+      category: "all",
+    },
+    {
+      id: 1,
+      title: "Twitch",
+      imgProject: Twitch,
+      projectUrl: "/projectDetail",
+      category: "mobile",
+    },
+    {
+      id: 2,
+      title: "Crypto",
+      imgProject: Crypto,
+      projectUrl: "/projectDetail",
+      category: "web",
+    },
+    {
+      id: 3,
+      title: "Property",
+      imgProject: Property,
+      projectUrl: "/projectDetail",
+      category: "all",
+    },
+    // ... daftar project lainnya
+  ];
+
+  return {
+    props: {
+      projdataProjectsects,
+    },
+  };
 }
