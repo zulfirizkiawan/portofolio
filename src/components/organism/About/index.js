@@ -17,24 +17,23 @@ export default function About() {
           <h2 className="py-4">Siapa saya?</h2>
           <div className="w-[13%] bg-[#035B81] h-2" />
           <p className="py-2 text-gray-600 text-justify pt-5">
-            Saya seorang Jr. Mobile Developer dalam bidang pengembangan aplikasi
-            mobile. saya memiliki pengetahuan dan keterampilan dalam membangun
-            aplikasi yang dapat berjalan pada perangkat mobile seperti
-            smartphone atau tablet dan juga memiliki pemahaman yang baik tentang
-            desain antarmuka pengguna (UI) yang responsif, serta kemampuan untuk
-            mengintegrasikan layanan pihak ketiga seperti penggunaan API dan
-            integrasi dengan database. Sebagai Mobile Developer saya menguasai
-            bahasa pemrograman React Native.
+            Halo, nama saya Zulfi Rizkiawan, usia 22 tahun. Saya baru lulus dari
+            STIKI Malang pada bulan Mei 2023. Dalam perjalanan pendidikanku,
+            saya memperoleh pengetahuan mendalam tentang pemrograman mobile dan
+            menguasai framework React Native. Saya senang menghadapi tantangan
+            baru dalam pengembangan aplikasi mobile dan terus mengikuti
+            perkembangan teknologi terbaru di bidang ini. Saya seorang Jr.
+            Mobile Developer yang memiliki pengetahuan dan keterampilan dalam
+            membangun aplikasi serta kemampuan untuk mengintegrasikan layanan
+            pihak ketiga seperti penggunaan API dan integrasi dengan database.
           </p>
           <p className="py-2 text-gray-600 text-justify">
             Dan saya juga seorang Jr. Front-End Developer yang fokus pada
             pengembangan interaktif dari sebuah aplikasi web. Saya bertanggung
             jawab untuk menerjemahkan desain UI/UX menjadi kode-kode yang dapat
-            dijalankan di web browser dan juga memahami prinsip-prinsip desain
-            responsif untuk memastikan tampilan yang optimal pada berbagai
-            perangkat dan ukuran layar. Selain itu, saya sering bekerja dengan
-            framework dan library seperti React - Next JS untuk mempercepat
-            proses pengembangan dan meningkatkan fungsionalitas aplikasi web.
+            dijalankan di web browser. Selain itu, saya sering bekerja dengan
+            framework seperti React - Next JS untuk mempercepat proses
+            pengembangan dan meningkatkan fungsionalitas aplikasi web.
           </p>
           <div className="pt-5">
             <a

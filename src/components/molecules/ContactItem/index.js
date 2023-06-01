@@ -7,7 +7,7 @@ export default function ContactItem() {
   return (
     <div className="flex items-center justify-between max-w-[400px] m-auto py-4">
       <Link
-        href="https://www.linkedin.com/in/clint-briley-50056920a/"
+        href="https://www.linkedin.com/in/zulfi-rizkiawan-0337b71b0/"
         target="_blank"
         rel="noreferrer"
       >
@@ -34,8 +34,8 @@ export default function ContactItem() {
         </div>
       </Link>
       <a
-        href="/../public/Zulfi Rizkiawan-resume.pdf"
-        download="Zulfi Rizkiawan-resume.pdf"
+        href="/Zulfi-Rizkiawan-resume.pdf"
+        download="Zulfi-Rizkiawan-resume.pdf"
       >
         <div className="bg-[#028E37] rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
           <BsFillPersonLinesFill className="text-white" size={20} />

@@ -5,8 +5,6 @@ import { useState } from "react";
 export default function Project(props) {
   const [activeCategory, setActiveCategory] = useState("all");
 
-  console.log("props.", props.dataProjects);
-
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
   };
@@ -42,8 +40,6 @@ export default function Project(props) {
     },
     // ... daftar project lainnya
   ];
-
-  console.log("project", projects);
 
   const filteredProjects =
     activeCategory === "all"
@@ -94,44 +90,4 @@ export default function Project(props) {
       </div>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const dataProjects = [
-    {
-      id: 0,
-      title: "Netflix",
-      imgProject: Netflix,
-      projectUrl: "/projectDetail",
-      category: "all",
-    },
-    {
-      id: 1,
-      title: "Twitch",
-      imgProject: Twitch,
-      projectUrl: "/projectDetail",
-      category: "mobile",
-    },
-    {
-      id: 2,
-      title: "Crypto",
-      imgProject: Crypto,
-      projectUrl: "/projectDetail",
-      category: "web",
-    },
-    {
-      id: 3,
-      title: "Property",
-      imgProject: Property,
-      projectUrl: "/projectDetail",
-      category: "all",
-    },
-    // ... daftar project lainnya
-  ];
-
-  return {
-    props: {
-      projdataProjectsects,
-    },
-  };
 }

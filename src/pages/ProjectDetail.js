@@ -6,6 +6,23 @@ import Link from "next/link";
 import Navbar from "@/components/organism/Navbar";
 
 const ProjectDetail = () => {
+  const imgData = [
+    {
+      id: 0,
+      imgProject: Netflix,
+    },
+    {
+      id: 1,
+      imgProject: Twitch,
+    },
+    {
+      id: 2,
+      imgProject: Property,
+    },
+    // ... daftar project lainnya
+  ];
+
+  const filteredImageData = imgData.filter((projectImg) => projectImg.id === 2);
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageClick = (image) => {
@@ -22,13 +39,16 @@ const ProjectDetail = () => {
       <div className="w-full">
         <div className="w-screen h-[50vh] relative">
           <div className="absolute top-0 left-0 w-full h-[50vh] bg-black/70 z-10" />
-          <Image
-            className="absolute z-1"
-            layout="fill"
-            objectFit="cover"
-            src={Netflix}
-            alt="/"
-          />
+          {filteredImageData.map((projectImg) => (
+            <Image
+              key={projectImg.id}
+              className="absolute z-1"
+              layout="fill"
+              objectFit="cover"
+              src={projectImg.imgProject}
+              alt="/"
+            />
+          ))}
           <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
             <h2 className="py-2">Property Finders</h2>
             <h3>React JS / Tailwind / Firebase</h3>
@@ -39,30 +59,16 @@ const ProjectDetail = () => {
             Project
           </p>
           <div className="grid md:grid-cols-3 gap-8 pt-2">
-            <div>
-              <Image
-                src={Twitch}
-                alt="/"
-                className="w-full cursor-pointer"
-                onClick={() => handleImageClick(Twitch)}
-              />
-            </div>
-            <div>
-              <Image
-                src={Property}
-                alt="/"
-                className="w-full cursor-pointer"
-                onClick={() => handleImageClick(Property)}
-              />
-            </div>
-            <div>
-              <Image
-                src={Crypto}
-                alt="/"
-                className="w-full cursor-pointer"
-                onClick={() => handleImageClick(Crypto)}
-              />
-            </div>
+            {imgData.map((projectImg) => (
+              <div key={projectImg.id}>
+                <Image
+                  src={projectImg.imgProject}
+                  alt="/"
+                  className="w-full cursor-pointer"
+                  onClick={() => handleImageClick(projectImg.imgProject)}
+                />
+              </div>
+            ))}
 
             {/* Modal */}
             {selectedImage && (

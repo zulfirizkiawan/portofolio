@@ -66,7 +66,12 @@ export default function Navbar({ type }) {
                 <a onClick={() => handleMenuClick("#project")}>Projects</a>
               </li>
               <li className="flex items-center ml-10 text-base font-medium  group hover:border-b hover:text-[#173A56] hover:font-bold">
-                <a href="#">Resume</a>
+                <a
+                  href="/Zulfi-Rizkiawan-resume.pdf"
+                  download="Zulfi-Rizkiawan-resume.pdf"
+                >
+                  Resume
+                </a>
                 <HiOutlineDownload
                   className="pl-1 group hover:text-[#173A56] "
                   size={20}
@@ -91,7 +96,12 @@ export default function Navbar({ type }) {
                 <Link href="/#project">Project</Link>
               </li>
               <li className="flex items-center ml-10 text-base font-medium  group hover:border-b hover:text-[#173A56] hover:font-bold">
-                <Link href="#">Resume</Link>
+                <a
+                  href="/Zulfi-Rizkiawan-resume.pdf"
+                  download="Zulfi-Rizkiawan-resume.pdf"
+                >
+                  Resume
+                </a>
                 <HiOutlineDownload
                   className="pl-1 group hover:text-[#173A56] "
                   size={20}
@@ -173,12 +183,17 @@ export default function Navbar({ type }) {
                 >
                   <a onClick={() => handleMenuClick("#project")}>Projects</a>
                 </li>
-                <li
-                  onClick={() => setNav(false)}
-                  className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
+                <a
+                  href="/Zulfi-Rizkiawan-resume.pdf"
+                  download="Zulfi-Rizkiawan-resume.pdf"
                 >
-                  Resume
-                </li>
+                  <li
+                    onClick={() => setNav(false)}
+                    className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
+                  >
+                    Resume
+                  </li>
+                </a>
                 <li
                   onClick={() => setNav(false)}
                   className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
@@ -220,14 +235,17 @@ export default function Navbar({ type }) {
                     Projects
                   </li>
                 </Link>
-                <Link href="#">
+                <a
+                  href="/Zulfi-Rizkiawan-resume.pdf"
+                  download="Zulfi-Rizkiawan-resume.pdf"
+                >
                   <li
                     onClick={() => setNav(false)}
                     className="py-4 text-sm group hover:text-[#173A56] hover:font-bold"
                   >
                     Resume
                   </li>
-                </Link>
+                </a>
                 <Link href="/#contact">
                   <li
                     onClick={() => setNav(false)}
