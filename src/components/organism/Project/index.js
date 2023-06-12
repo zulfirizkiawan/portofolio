@@ -1,45 +1,103 @@
 import { ProjectItem } from "@/components/molecules";
-import { Crypto, Netflix, Property, Twitch } from "../../../../public/assets";
 import { useState } from "react";
+import {
+  Property,
+  belum,
+  digiponic,
+  storegg,
+  storeggAdmin,
+  vdbAdmin,
+} from "../../../../public/assets";
 
-export default function Project(props) {
+export default function Project() {
   const [activeCategory, setActiveCategory] = useState("all");
-
-  const handleCategoryClick = (category) => {
-    setActiveCategory(category);
-  };
 
   const projects = [
     {
       id: 0,
-      title: "Netflix",
-      imgProject: Netflix,
-      projectUrl: "/ProjectDetail",
-      category: "all",
+      title: "Store GG",
+      framework: "React JS",
+      imgProject: storegg,
+      projectUrl: "/StoreGg",
+      category: "web",
     },
     {
       id: 1,
-      title: "Twitch",
-      imgProject: Twitch,
-      projectUrl: "/ProjectDetail",
-      category: "mobile",
+      title: "Digiponic",
+      framework: "React JS",
+      imgProject: digiponic,
+      projectUrl: "/Digiponic",
+      category: "web",
     },
     {
       id: 2,
-      title: "Crypto",
-      imgProject: Crypto,
-      projectUrl: "/ProjectDetail",
+      title: "Store GG Admin Panel",
+      framework: "Laravel",
+      imgProject: storeggAdmin,
+      projectUrl: "/StoreGgAdmin",
       category: "web",
     },
     {
       id: 3,
-      title: "Property",
-      imgProject: Property,
-      projectUrl: "/ProjectDetail",
-      category: "all",
+      title: "VDB Karyawan",
+      framework: "React Native",
+      imgProject: belum,
+      projectUrl: "/VdbKaryawan",
+      category: "mobile",
     },
-    // ... daftar project lainnya
+    {
+      id: 4,
+      title: "NagaMas Store",
+      framework: "React Native",
+      imgProject: belum,
+      projectUrl: "/NagamasStore",
+      category: "mobile",
+    },
+    {
+      id: 5,
+      title: "My Doctor",
+      framework: "React Native",
+      imgProject: belum,
+      projectUrl: "/MyDoctor",
+      category: "mobile",
+    },
+    {
+      id: 6,
+      title: "Food Market",
+      framework: "React Native",
+      imgProject: belum,
+      projectUrl: "/FoodMarket",
+      category: "mobile",
+    },
+    {
+      id: 7,
+      title: "VDB Perawatan Hewan",
+      framework: "React Native",
+      imgProject: belum,
+      projectUrl: "/VdbPerawatan",
+      category: "mobile",
+    },
+    {
+      id: 8,
+      title: "VDB Admin Panel",
+      framework: "Laravel",
+      imgProject: vdbAdmin,
+      projectUrl: "/VdbAdmin",
+      category: "web",
+    },
+    {
+      id: 9,
+      title: "Absensi Digiponic",
+      framework: "React Native",
+      imgProject: belum,
+      projectUrl: "/AbsensiDigiponic",
+      category: "mobile",
+    },
   ];
+
+  const handleCategoryClick = (category) => {
+    setActiveCategory(category);
+  };
 
   const filteredProjects =
     activeCategory === "all"
@@ -78,10 +136,11 @@ export default function Project(props) {
           </button>
         </div>
         <div className="grid md:grid-cols-3 gap-8 pt-2">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <ProjectItem
               key={project.id}
               title={project.title}
+              framework={project.framework}
               imgProject={project.imgProject}
               projectUrl={project.projectUrl}
             />

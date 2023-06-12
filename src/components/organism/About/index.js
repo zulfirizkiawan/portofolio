@@ -18,14 +18,14 @@ export default function About() {
           <div className="w-[13%] bg-[#035B81] h-2" />
           <p className="py-2 text-gray-600 text-justify pt-5">
             Halo, nama saya Zulfi Rizkiawan, usia 22 tahun. Saya baru lulus dari
-            STIKI Malang pada bulan Mei 2023. Dalam perjalanan pendidikanku,
-            saya memperoleh pengetahuan mendalam tentang pemrograman mobile dan
-            menguasai framework React Native. Saya senang menghadapi tantangan
-            baru dalam pengembangan aplikasi mobile dan terus mengikuti
-            perkembangan teknologi terbaru di bidang ini. Saya seorang Jr.
-            Mobile Developer yang memiliki pengetahuan dan keterampilan dalam
-            membangun aplikasi serta kemampuan untuk mengintegrasikan layanan
-            pihak ketiga seperti penggunaan API dan integrasi dengan database.
+            STIKI Malang. Dalam perjalanan pendidikanku, saya memperoleh
+            pengetahuan tentang pemrograman mobile dan menguasai framework React
+            Native. Saya senang menghadapi tantangan baru dalam pengembangan
+            aplikasi mobile dan terus mengikuti perkembangan teknologi terbaru
+            di bidang ini. Saya seorang Jr. Mobile Developer yang memiliki
+            pengetahuan dan keterampilan dalam membangun aplikasi serta
+            kemampuan untuk mengintegrasikan layanan pihak ketiga seperti
+            penggunaan integrasi API.
           </p>
           <p className="py-2 text-gray-600 text-justify">
             Dan saya juga seorang Jr. Front-End Developer yang fokus pada

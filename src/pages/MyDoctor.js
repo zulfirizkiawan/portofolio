@@ -1,27 +1,31 @@
-import Image from "next/image";
-import React, { useState } from "react";
-import { Crypto, Netflix, Property, Twitch } from "../../public/assets";
-import { RiRadioButtonFill } from "react-icons/ri";
-import Link from "next/link";
 import Navbar from "@/components/organism/Navbar";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { RiRadioButtonFill } from "react-icons/ri";
+import {
+  storeggAdmin,
+  storeggAdmin2,
+  storeggAdmin3,
+} from "../../public/assets";
 
-const ProjectDetail = () => {
+const MyDoctor = () => {
   const imgData = [
     {
       id: 0,
-      imgProject: Netflix,
+      imgProject: storeggAdmin,
     },
     {
       id: 1,
-      imgProject: Twitch,
+      imgProject: storeggAdmin2,
     },
     {
       id: 2,
-      imgProject: Property,
+      imgProject: storeggAdmin3,
     },
   ];
 
-  const filteredImageData = imgData.filter((projectImg) => projectImg.id === 2);
+  const filteredImageData = imgData.filter((projectImg) => projectImg.id === 0);
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageClick = (image) => {
@@ -49,8 +53,8 @@ const ProjectDetail = () => {
             />
           ))}
           <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-            <h2 className="py-2">Property Finders</h2>
-            <h3>React JS / Tailwind / Firebase</h3>
+            <h2 className="py-2">Aplikasi Android My Doctor</h2>
+            <h3>React Native / Firebase </h3>
           </div>
         </div>
         <div className="max-w-[1240px] mx-auto p-2 px-6 ">
@@ -91,27 +95,22 @@ const ProjectDetail = () => {
           <div className="col-span-4">
             <h2>Ringkasan</h2>
             <p className="text-justify pt-3">
-              This app was built using React JS and is hosted on Firebase. Users
-              are able to search properties based on an Address, City, or ZIP
-              code to retrieve a list of active properties currently for sale.
-              You will be able to view property information as well as the
-              specific location of the property integrated with the Google Maps
-              API. User authentication is available so you can signup and signin
-              to your account with an email address in order to save your
-              favorite properties. This is made possible with Zillow API.
+              Aplikasi My Doctor hadir sebagai solusi mudah dan efisien untuk
+              menemukan dokter yang tepat bagi kebutuhan konsultasi kesehatanmu.
+              Dengan beberapa kali sentuhan layar, kamu dapat mencari dan
+              menemukan dokter spesialis yang sesuai dengan kondisi kesehatanmu.
+              Tak perlu lagi bersusah payah mencari dan menghubungi dokter
+              secara manual, karena aplikasi ini menyediakan fitur pencarian
+              yang intuitif dan lengkap.
             </p>
             <a
-              href="https://github.com/fireclint/property-finder"
+              href="https://github.com/zulfirizkiawan/Mydoctor-React-Native"
               target="_blank"
               rel="noreferrer"
             >
               <button className="px-8 py-2 mt-4 mr-8">Code</button>
             </a>
-            <a
-              href="https://property-finder-development.web.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="#" target="_blank" rel="noreferrer">
               <button className="px-8 py-2 mt-4">Demo</button>
             </a>
           </div>
@@ -120,22 +119,13 @@ const ProjectDetail = () => {
               <p className="text-center font-bold pb-2">Teknologi</p>
               <div className="grid grid-cols-3 md:grid-cols-1 ml-2">
                 <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> React
-                </p>
-                <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> Tailwind
+                  <RiRadioButtonFill className="pr-1" /> React Native
                 </p>
                 <p className="text-gray-600 py-2 flex items-center">
                   <RiRadioButtonFill className="pr-1" /> Javascript
                 </p>
                 <p className="text-gray-600 py-2 flex items-center">
                   <RiRadioButtonFill className="pr-1" /> Firebase
-                </p>
-                <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> Google API
-                </p>
-                <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> Zillow API
                 </p>
               </div>
             </div>
@@ -149,4 +139,4 @@ const ProjectDetail = () => {
   );
 };
 
-export default ProjectDetail;
+export default MyDoctor;

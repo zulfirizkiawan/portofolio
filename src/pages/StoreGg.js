@@ -1,27 +1,27 @@
-import Image from "next/image";
-import React, { useState } from "react";
-import { Crypto, Netflix, Property, Twitch } from "../../public/assets";
-import { RiRadioButtonFill } from "react-icons/ri";
-import Link from "next/link";
 import Navbar from "@/components/organism/Navbar";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { RiRadioButtonFill } from "react-icons/ri";
+import { storegg, storegg2, storegg3 } from "../../public/assets";
 
-const ProjectDetail = () => {
+const StoreGg = () => {
   const imgData = [
     {
       id: 0,
-      imgProject: Netflix,
+      imgProject: storegg,
     },
     {
       id: 1,
-      imgProject: Twitch,
+      imgProject: storegg2,
     },
     {
       id: 2,
-      imgProject: Property,
+      imgProject: storegg3,
     },
   ];
 
-  const filteredImageData = imgData.filter((projectImg) => projectImg.id === 2);
+  const filteredImageData = imgData.filter((projectImg) => projectImg.id === 0);
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageClick = (image) => {
@@ -49,8 +49,8 @@ const ProjectDetail = () => {
             />
           ))}
           <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-            <h2 className="py-2">Property Finders</h2>
-            <h3>React JS / Tailwind / Firebase</h3>
+            <h2 className="py-2">Store GG TopUp Game</h2>
+            <h3>React JS / Tailwind / API integrasi</h3>
           </div>
         </div>
         <div className="max-w-[1240px] mx-auto p-2 px-6 ">
@@ -91,24 +91,30 @@ const ProjectDetail = () => {
           <div className="col-span-4">
             <h2>Ringkasan</h2>
             <p className="text-justify pt-3">
-              This app was built using React JS and is hosted on Firebase. Users
-              are able to search properties based on an Address, City, or ZIP
-              code to retrieve a list of active properties currently for sale.
-              You will be able to view property information as well as the
-              specific location of the property integrated with the Google Maps
-              API. User authentication is available so you can signup and signin
-              to your account with an email address in order to save your
-              favorite properties. This is made possible with Zillow API.
+              Web StoreGG top game menghadirkan pengalaman yang luar biasa
+              berkat penggunaan teknologi terdepan seperti React JS, Tailwind
+              CSS, dan API integrasi. Dengan React JS, kami dapat memberikan
+              tampilan yang responsif, interaktif, dan dinamis kepada pengguna.
+              Desain yang modern dan estetis dibangun dengan bantuan Tailwind
+              CSS, memberikan antarmuka yang menawan dan mudah digunakan.
+              Melalui integrasi API yang canggih, kami dapat menyediakan akses
+              yang mulus ke berbagai fitur game, seperti leaderboard,
+              notifikasi, dan sistem pembayaran. Semua ini membantu menciptakan
+              pengalaman gaming yang tak tertandingi, di mana pengguna dapat
+              menikmati game favorit mereka dengan lebih lancar dan mendalam.
+              Dengan kombinasi teknologi yang kuat ini, web aplikasi top game
+              kami menjadi destinasi terbaik bagi para gamers yang menginginkan
+              pengalaman bermain yang terdepan dan tak terlupakan.
             </p>
             <a
-              href="https://github.com/fireclint/property-finder"
+              href="https://github.com/zulfirizkiawan/GameTopUp-ReactJS"
               target="_blank"
               rel="noreferrer"
             >
               <button className="px-8 py-2 mt-4 mr-8">Code</button>
             </a>
             <a
-              href="https://property-finder-development.web.app/"
+              href="https://game-topup-eight.vercel.app/"
               target="_blank"
               rel="noreferrer"
             >
@@ -129,13 +135,7 @@ const ProjectDetail = () => {
                   <RiRadioButtonFill className="pr-1" /> Javascript
                 </p>
                 <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> Firebase
-                </p>
-                <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> Google API
-                </p>
-                <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> Zillow API
+                  <RiRadioButtonFill className="pr-1" /> API integrasi
                 </p>
               </div>
             </div>
@@ -149,4 +149,4 @@ const ProjectDetail = () => {
   );
 };
 
-export default ProjectDetail;
+export default StoreGg;

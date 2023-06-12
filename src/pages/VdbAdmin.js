@@ -1,27 +1,27 @@
-import Image from "next/image";
-import React, { useState } from "react";
-import { Crypto, Netflix, Property, Twitch } from "../../public/assets";
-import { RiRadioButtonFill } from "react-icons/ri";
-import Link from "next/link";
 import Navbar from "@/components/organism/Navbar";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { RiRadioButtonFill } from "react-icons/ri";
+import { vdbAdmin, vdbAdmin2, vdbAdmin3 } from "../../public/assets";
 
-const ProjectDetail = () => {
+const VdbAdmin = () => {
   const imgData = [
     {
       id: 0,
-      imgProject: Netflix,
+      imgProject: vdbAdmin,
     },
     {
       id: 1,
-      imgProject: Twitch,
+      imgProject: vdbAdmin2,
     },
     {
       id: 2,
-      imgProject: Property,
+      imgProject: vdbAdmin3,
     },
   ];
 
-  const filteredImageData = imgData.filter((projectImg) => projectImg.id === 2);
+  const filteredImageData = imgData.filter((projectImg) => projectImg.id === 0);
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageClick = (image) => {
@@ -49,8 +49,8 @@ const ProjectDetail = () => {
             />
           ))}
           <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-            <h2 className="py-2">Property Finders</h2>
-            <h3>React JS / Tailwind / Firebase</h3>
+            <h2 className="py-2">VDB Admin Panel </h2>
+            <h3>React Native / Redux / API Integrasi</h3>
           </div>
         </div>
         <div className="max-w-[1240px] mx-auto p-2 px-6 ">
@@ -91,27 +91,29 @@ const ProjectDetail = () => {
           <div className="col-span-4">
             <h2>Ringkasan</h2>
             <p className="text-justify pt-3">
-              This app was built using React JS and is hosted on Firebase. Users
-              are able to search properties based on an Address, City, or ZIP
-              code to retrieve a list of active properties currently for sale.
-              You will be able to view property information as well as the
-              specific location of the property integrated with the Google Maps
-              API. User authentication is available so you can signup and signin
-              to your account with an email address in order to save your
-              favorite properties. This is made possible with Zillow API.
+              VDB Admin Panel adalah alat yang sangat berguna dalam memudahkan
+              manajemen transaksi dan data lainnya. Dengan fitur-fitur yang
+              lengkap dan user-friendly, admin dapat dengan mudah mengelola
+              transaksi, memantau inventaris, mengatur pembayaran, dan mengelola
+              data pelanggan. Aplikasi ini memberikan akses cepat dan
+              terorganisir ke semua informasi yang diperlukan, sehingga
+              memungkinkan admin untuk mengambil keputusan yang tepat dalam
+              waktu singkat. Selain itu, fitur laporan dan analitik yang
+              disediakan oleh aplikasi VDB Admin Panel membantu admin dalam
+              menganalisis kinerja bisnis, mengidentifikasi tren penjualan, dan
+              merencanakan strategi yang lebih baik. Dengan aplikasi ini,
+              manajemen transaksi dan pengelolaan data menjadi lebih efisien dan
+              efektif, memungkinkan perusahaan untuk menjalankan operasionalnya
+              dengan lancar dan sukses.
             </p>
             <a
-              href="https://github.com/fireclint/property-finder"
+              href="https://github.com/zulfirizkiawan/vdb-backend-Laravel"
               target="_blank"
               rel="noreferrer"
             >
               <button className="px-8 py-2 mt-4 mr-8">Code</button>
             </a>
-            <a
-              href="https://property-finder-development.web.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="#" target="_blank" rel="noreferrer">
               <button className="px-8 py-2 mt-4">Demo</button>
             </a>
           </div>
@@ -120,22 +122,16 @@ const ProjectDetail = () => {
               <p className="text-center font-bold pb-2">Teknologi</p>
               <div className="grid grid-cols-3 md:grid-cols-1 ml-2">
                 <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> React
+                  <RiRadioButtonFill className="pr-1" /> Laravel
                 </p>
                 <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> Tailwind
+                  <RiRadioButtonFill className="pr-1" /> PHP
                 </p>
                 <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> Javascript
+                  <RiRadioButtonFill className="pr-1" /> MySQL
                 </p>
                 <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> Firebase
-                </p>
-                <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> Google API
-                </p>
-                <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> Zillow API
+                  <RiRadioButtonFill className="pr-1" /> jetstream
                 </p>
               </div>
             </div>
@@ -149,4 +145,4 @@ const ProjectDetail = () => {
   );
 };
 
-export default ProjectDetail;
+export default VdbAdmin;

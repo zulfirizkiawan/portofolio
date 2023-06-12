@@ -1,27 +1,31 @@
-import Image from "next/image";
-import React, { useState } from "react";
-import { Crypto, Netflix, Property, Twitch } from "../../public/assets";
-import { RiRadioButtonFill } from "react-icons/ri";
-import Link from "next/link";
 import Navbar from "@/components/organism/Navbar";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { RiRadioButtonFill } from "react-icons/ri";
+import {
+  storeggAdmin,
+  storeggAdmin2,
+  storeggAdmin3,
+} from "../../public/assets";
 
-const ProjectDetail = () => {
+const AbsensiDigiponic = () => {
   const imgData = [
     {
       id: 0,
-      imgProject: Netflix,
+      imgProject: storeggAdmin,
     },
     {
       id: 1,
-      imgProject: Twitch,
+      imgProject: storeggAdmin2,
     },
     {
       id: 2,
-      imgProject: Property,
+      imgProject: storeggAdmin3,
     },
   ];
 
-  const filteredImageData = imgData.filter((projectImg) => projectImg.id === 2);
+  const filteredImageData = imgData.filter((projectImg) => projectImg.id === 0);
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageClick = (image) => {
@@ -49,8 +53,8 @@ const ProjectDetail = () => {
             />
           ))}
           <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-            <h2 className="py-2">Property Finders</h2>
-            <h3>React JS / Tailwind / Firebase</h3>
+            <h2 className="py-2">Aplikasi Android Absensi Digiponic </h2>
+            <h3>React Native / Redux / API Integrasi</h3>
           </div>
         </div>
         <div className="max-w-[1240px] mx-auto p-2 px-6 ">
@@ -91,27 +95,25 @@ const ProjectDetail = () => {
           <div className="col-span-4">
             <h2>Ringkasan</h2>
             <p className="text-justify pt-3">
-              This app was built using React JS and is hosted on Firebase. Users
-              are able to search properties based on an Address, City, or ZIP
-              code to retrieve a list of active properties currently for sale.
-              You will be able to view property information as well as the
-              specific location of the property integrated with the Google Maps
-              API. User authentication is available so you can signup and signin
-              to your account with an email address in order to save your
-              favorite properties. This is made possible with Zillow API.
+              Aplikasi Absensi Digiponic merupakan solusi yang sangat praktis
+              untuk karyawan dalam mengelola cuti, absensi, dan laporan sakit.
+              Dengan aplikasi ini, karyawan dapat dengan mudah mengajukan cuti,
+              mencatat kehadiran harian, dan melaporkan sakit secara cepat dan
+              efisien. Selain itu, aplikasi Absensi Digiponic juga menyediakan
+              fitur monitoring yang memungkinkan manajer atau HRD untuk melacak
+              dan mengelola data absensi karyawan dengan mudah. Dengan kemudahan
+              penggunaan dan aksesibilitas yang tinggi, aplikasi ini mempermudah
+              proses administrasi kehadiran karyawan dan meningkatkan efisiensi
+              dalam pengelolaan cuti serta pelaporan sakit di perusahaan.
             </p>
             <a
-              href="https://github.com/fireclint/property-finder"
+              href="https://github.com/zulfirizkiawan/AbsensiDigiponic-React-Native"
               target="_blank"
               rel="noreferrer"
             >
               <button className="px-8 py-2 mt-4 mr-8">Code</button>
             </a>
-            <a
-              href="https://property-finder-development.web.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="#" target="_blank" rel="noreferrer">
               <button className="px-8 py-2 mt-4">Demo</button>
             </a>
           </div>
@@ -120,22 +122,19 @@ const ProjectDetail = () => {
               <p className="text-center font-bold pb-2">Teknologi</p>
               <div className="grid grid-cols-3 md:grid-cols-1 ml-2">
                 <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> React
-                </p>
-                <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> Tailwind
+                  <RiRadioButtonFill className="pr-1" /> React Native
                 </p>
                 <p className="text-gray-600 py-2 flex items-center">
                   <RiRadioButtonFill className="pr-1" /> Javascript
                 </p>
                 <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> Firebase
+                  <RiRadioButtonFill className="pr-1" /> API Integrasi
                 </p>
                 <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> Google API
+                  <RiRadioButtonFill className="pr-1" /> Redux
                 </p>
                 <p className="text-gray-600 py-2 flex items-center">
-                  <RiRadioButtonFill className="pr-1" /> Zillow API
+                  <RiRadioButtonFill className="pr-1" /> Redux-thunk
                 </p>
               </div>
             </div>
@@ -149,4 +148,4 @@ const ProjectDetail = () => {
   );
 };
 
-export default ProjectDetail;
+export default AbsensiDigiponic;
