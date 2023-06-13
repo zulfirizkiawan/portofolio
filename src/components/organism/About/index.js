@@ -17,15 +17,16 @@ export default function About() {
           <h2 className="py-4">Siapa saya?</h2>
           <div className="w-[13%] bg-[#035B81] h-2" />
           <p className="py-2 text-gray-600 text-justify pt-5">
-            Halo, nama saya Zulfi Rizkiawan, usia 22 tahun. Saya baru lulus dari
-            STIKI Malang. Dalam perjalanan pendidikanku, saya memperoleh
-            pengetahuan tentang pemrograman mobile dan menguasai framework React
-            Native. Saya senang menghadapi tantangan baru dalam pengembangan
-            aplikasi mobile dan terus mengikuti perkembangan teknologi terbaru
-            di bidang ini. Saya seorang Jr. Mobile Developer yang memiliki
-            pengetahuan dan keterampilan dalam membangun aplikasi serta
-            kemampuan untuk mengintegrasikan layanan pihak ketiga seperti
-            penggunaan integrasi API.
+            Halo, nama saya Zulfi Rizkiawan, usia 22 tahun. Saya lulusan dari
+            STIKI Malang dengan program studi Teknik Informatika. Dalam
+            perjalanan pendidikanku, saya memperoleh pengetahuan tentang
+            pemrograman mobile dan menguasai framework React Native. Saya senang
+            menghadapi tantangan baru dalam pengembangan aplikasi mobile dan
+            terus mengikuti perkembangan teknologi terbaru di bidang ini. Saya
+            seorang Jr. Mobile Developer yang memiliki pengetahuan dan
+            keterampilan dalam membangun aplikasi serta kemampuan untuk
+            mengintegrasikan layanan pihak ketiga seperti penggunaan integrasi
+            API.
           </p>
           <p className="py-2 text-gray-600 text-justify">
             Dan saya juga seorang Jr. Front-End Developer yang fokus pada

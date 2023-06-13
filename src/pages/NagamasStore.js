@@ -3,25 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { RiRadioButtonFill } from "react-icons/ri";
-import {
-  storeggAdmin,
-  storeggAdmin2,
-  storeggAdmin3,
-} from "../../public/assets";
+import { nagamas, nagamas2, nagamas3 } from "../../public/assets";
 
 const NagamasStore = () => {
   const imgData = [
     {
       id: 0,
-      imgProject: storeggAdmin,
+      imgProject: nagamas,
     },
     {
       id: 1,
-      imgProject: storeggAdmin2,
+      imgProject: nagamas2,
     },
     {
       id: 2,
-      imgProject: storeggAdmin3,
+      imgProject: nagamas3,
     },
   ];
 

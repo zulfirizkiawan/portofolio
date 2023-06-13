@@ -4,24 +4,24 @@ import Link from "next/link";
 import { useState } from "react";
 import { RiRadioButtonFill } from "react-icons/ri";
 import {
-  storeggAdmin,
-  storeggAdmin2,
-  storeggAdmin3,
+  vdbperawatan2,
+  vdbperawatan3,
+  vdbperawatan,
 } from "../../public/assets";
 
 const VdbPerawatan = () => {
   const imgData = [
     {
       id: 0,
-      imgProject: storeggAdmin,
+      imgProject: vdbperawatan,
     },
     {
       id: 1,
-      imgProject: storeggAdmin2,
+      imgProject: vdbperawatan2,
     },
     {
       id: 2,
-      imgProject: storeggAdmin3,
+      imgProject: vdbperawatan3,
     },
   ];
 

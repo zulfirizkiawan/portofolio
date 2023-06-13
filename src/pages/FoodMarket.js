@@ -3,25 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { RiRadioButtonFill } from "react-icons/ri";
-import {
-  storeggAdmin,
-  storeggAdmin2,
-  storeggAdmin3,
-} from "../../public/assets";
+import { foodmarket, foodmarket2, foodmarket3 } from "../../public/assets";
 
 const Foodmarket = () => {
   const imgData = [
     {
       id: 0,
-      imgProject: storeggAdmin,
+      imgProject: foodmarket,
     },
     {
       id: 1,
-      imgProject: storeggAdmin2,
+      imgProject: foodmarket2,
     },
     {
       id: 2,
-      imgProject: storeggAdmin3,
+      imgProject: foodmarket3,
     },
   ];
 
