@@ -1,8 +1,6 @@
 import { ProjectItem } from "@/components/molecules";
 import { useState } from "react";
 import {
-  Property,
-  belum,
   digiponic,
   foodmarket,
   nagamas,

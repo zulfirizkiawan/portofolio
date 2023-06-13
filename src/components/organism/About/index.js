@@ -1,7 +1,5 @@
 import Image from "next/image";
-import React from "react";
-import aboutPhoto from "../../../../public/assets/aboutPhoto.png";
-import Link from "next/link";
+import aboutPhoto from "public/assets/aboutPhoto.png";
 
 export default function About() {
   return (
