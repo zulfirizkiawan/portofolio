@@ -47,7 +47,13 @@ export default function About() {
           </div>
         </div>
         <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-[10%] flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
-          <Image src={aboutPhoto} className="rounded-[10%]" alt="/" />
+          <Image
+            src="/../public/assets/aboutPhoto.png"
+            className="rounded-[10%]"
+            alt="/"
+            width={600}
+            height={600}
+          />
         </div>
       </div>
     </div>

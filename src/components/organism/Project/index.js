@@ -96,7 +96,7 @@ export default function Project() {
         <p className="py-4 uppercase text-xl tracking-widest text-[#035B81] ">
           Projects
         </p>
-        <h2 className="py-4">Apa yang saya bikin</h2>
+        <h2 className="py-4">Apa yang saya buat</h2>
         <div className="w-[13%] bg-[#035B81] h-2" />
         <div className=" justify-center py-4 md:py-8 flex-wrap">
           <button
