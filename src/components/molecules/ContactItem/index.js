@@ -7,7 +7,7 @@ export default function ContactItem() {
   return (
     <div className="flex items-center justify-between max-w-[400px] m-auto py-4">
       <Link
-        href="https://www.linkedin.com/in/zulfi-rizkiawan-0337b71b0/"
+        href="https://www.linkedin.com/in/zulfi-rizkiawan-27zr/"
         target="_blank"
         rel="noreferrer"
       >
