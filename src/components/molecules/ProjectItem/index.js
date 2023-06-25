@@ -8,7 +8,7 @@ export default function ProjectItem({
   framework,
 }) {
   return (
-    <div className=" bg-white relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 group hover:bg-gradient-to-r from-[#069557] to-[#02897A]">
+    <div className=" bg-white relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 group hover:bg-gradient-to-r from-[#069557] to-[#02897A] hover:scale-105 ease-in duration-300">
       <Image
         src={imgProject}
         alt="/"
