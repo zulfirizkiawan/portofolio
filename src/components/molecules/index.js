@@ -1,5 +1,5 @@
 import ContactItem from "./ContactItem";
 import ProjectItem from "./ProjectItem";
-import SkillItem from "./SkillItem";
+import SkillGroup from "./SkillGroup";
 
-export { ContactItem, ProjectItem, SkillItem };
+export { ContactItem, ProjectItem, SkillGroup };

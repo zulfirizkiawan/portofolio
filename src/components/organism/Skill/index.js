@@ -1,4 +1,4 @@
-import SkillItem from "@/components/molecules/SkillItem";
+import SkillItem from "@/components/atoms/SkillItem";
 import {
   Css,
   Github,
@@ -11,9 +11,11 @@ import {
 } from "../../../../public/assets";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { SkillGroup } from "@/components/molecules";
 
 export default function Skill() {
+  const [skills, setSkills] = useState(false);
   return (
     <div id="skill" className="w-full lg:h-screen p-2 px-10">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
@@ -22,7 +24,7 @@ export default function Skill() {
         </p>
         <h2 className="py-4">Apa yang saya bisa lakukan</h2>
         <div className="w-[13%] bg-[#035B81] h-2" />
-        <div class="relative flex overflow-x-hidden ">
+        <div class="relative overflow-x-hidden hidden md:flex">
           <div class="py-5 flex animate-marquee whitespace-nowrap">
             <SkillItem imgSkill={Javascript} title="javascript" />
             <SkillItem imgSkill={ReactNative} title="React Native" />
@@ -46,7 +48,7 @@ export default function Skill() {
           </div>
         </div>
 
-        <div class="relative flex overflow-x-hidden">
+        <div class="relative overflow-x-hidden hidden md:flex">
           <div class="py-5 flex animate-marquee3 whitespace-nowrap">
             <SkillItem imgSkill={Github} title="Github" />
             <SkillItem imgSkill={Laravel} title="LARAVEL" />
@@ -68,6 +70,10 @@ export default function Skill() {
             <SkillItem imgSkill={Nextjs} title="Next Js" />
             <SkillItem imgSkill={Tailwind} title="Tailwinds" />
           </div>
+        </div>
+
+        <div className="flex">
+          <SkillGroup />
         </div>
       </div>
     </div>

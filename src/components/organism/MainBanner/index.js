@@ -1,6 +1,4 @@
 import { ContactItem } from "@/components/molecules";
-import Image from "next/image";
-import aboutPhoto from "public/assets/aku.png";
 import React, { useRef } from "react";
 
 export default function MainBanner() {
@@ -13,7 +11,7 @@ export default function MainBanner() {
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex items-center">
         <div className="grid lg:grid-cols-5 md:grid-cols-2 mt-5 gap-5">
           <div className="col-span-3 w-full h-auto pt-40 md:pt-0 ">
-            <p className="uppercase text-sm tracking-widest text-gray-600 ">
+            <p className="uppercase text-sm tracking-widest text-gray-600 pt-5">
               AYO BANGUN SESUATU BERSAMA
             </p>
             <h2 className="">
