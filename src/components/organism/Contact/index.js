@@ -36,7 +36,7 @@ export default function Contact() {
 
           {/* right */}
           <div className="bg-white col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-[40px] lg:p-4">
-            <div className="p-4">
+            <div className="py-6 px-6 md:p-4 ">
               <form>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
@@ -99,7 +99,7 @@ export default function Contact() {
                     placeholder="Write your thoughts here..."
                   ></textarea>
                 </div>
-                <button className="py-2 px-4 text-white mt-4 font-bold ">
+                <button className="py-2 px-4 text-white mt-16 font-bold ">
                   Kirim Pesan
                 </button>
               </form>

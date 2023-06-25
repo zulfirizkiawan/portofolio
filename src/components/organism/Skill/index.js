@@ -22,22 +22,6 @@ export default function Skill() {
         </p>
         <h2 className="py-4">Apa yang saya bisa lakukan</h2>
         <div className="w-[13%] bg-[#035B81] h-2" />
-
-        {/* <div
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pt-5"
-          // data-aos="fade-up"
-          // data-aos-delay="70"
-        >
-          <SkillItem imgSkill={Javascript} title="javascript" />
-          <SkillItem imgSkill={ReactNative} title="React Native" />
-          <SkillItem imgSkill={Nextjs} title="Next Js" />
-          <SkillItem imgSkill={Tailwind} title="Tailwinds" />
-          <SkillItem imgSkill={Html} title="HTML" />
-          <SkillItem imgSkill={Css} title="CSS" />
-          <SkillItem imgSkill={Github} title="Github" />
-          <SkillItem imgSkill={Laravel} title="LARAVEL" />
-        </div> */}
-
         <div class="relative flex overflow-x-hidden ">
           <div class="py-5 flex animate-marquee whitespace-nowrap">
             <SkillItem imgSkill={Javascript} title="javascript" />
