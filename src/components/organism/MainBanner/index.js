@@ -22,10 +22,11 @@ export default function MainBanner() {
             <h3 className="py-2 text-gray-700 text-2xl">
               Mobile Developer & Front-End Web Developer
             </h3>
-            <p className="py-4 text-gray-600 max-w-[70%] m-auto">
+            <p className="py-4 text-gray-600 max-w-[90%] md:max-w-[70%] m-auto">
               Setiap commit di repository GitHub adalah langkah maju dalam
               perjalanan sebagai seorang pengembang. Terus memperluas
-              pengalaman, karena setiap kode yang ditulis membuka wawasan besar.
+              pengalaman, karena setiap kode yang ditulis akan memberikan
+              wawasan besar.
             </p>
             <div className="px-10">
               <ContactItem />
