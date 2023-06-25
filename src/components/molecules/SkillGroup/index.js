@@ -9,7 +9,7 @@ import {
   Nextjs,
   ReactNative,
   Tailwind,
-} from "../../../../out/assets";
+} from "../../../../public/assets";
 
 const SkillGroup = () => {
   return (
