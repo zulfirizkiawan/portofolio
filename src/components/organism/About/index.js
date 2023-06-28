@@ -11,8 +11,11 @@ export default function About() {
     AOS.refresh();
   }, []);
   return (
-    <div id="about" className="w-full p-2 flex flex-col py-10 px-10 ">
-      <div className="max-w-[1240px] mx-auto px-2 py-10">
+    <div
+      id="about"
+      className="w-full p-2 flex flex-col py-10 px-10 pt-20 sm:pt-0"
+    >
+      <div className="max-w-[1240px] mx-auto px-2 py-20">
         <div className="w-full">
           <p className="uppercase text-xl tracking-widest text-[#035B81] pt-10">
             About Me

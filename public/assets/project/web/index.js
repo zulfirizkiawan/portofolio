@@ -15,6 +15,9 @@ import belum from "./belum.png";
 import vdbAdmin from "./vdbAdmin.png";
 import vdbAdmin2 from "./vdbAdmin2.png";
 import vdbAdmin3 from "./vdbAdmin3.png";
+import shoesped from "./shoesped.png";
+import shoesped2 from "./shoesped2.png";
+import shoesped3 from "./shoesped3.png";
 
 export {
   Crypto,
@@ -34,4 +37,7 @@ export {
   vdbAdmin,
   vdbAdmin2,
   vdbAdmin3,
+  shoesped,
+  shoesped2,
+  shoesped3,
 };

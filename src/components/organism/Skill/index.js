@@ -24,8 +24,8 @@ export default function Skill() {
         </p>
         <h2 className="py-4">Apa yang saya bisa lakukan</h2>
         <div className="w-[13%] bg-[#035B81] h-2" />
-        <div class="relative overflow-x-hidden hidden md:flex">
-          <div class="py-5 flex animate-marquee whitespace-nowrap">
+        <div className="relative overflow-x-hidden hidden md:flex">
+          <div className="py-5 flex animate-marquee whitespace-nowrap">
             <SkillItem imgSkill={Javascript} title="javascript" />
             <SkillItem imgSkill={ReactNative} title="React Native" />
             <SkillItem imgSkill={Nextjs} title="Next Js" />
@@ -36,7 +36,7 @@ export default function Skill() {
             <SkillItem imgSkill={Laravel} title="LARAVEL" />
           </div>
 
-          <div class="absolute flex top-0 py-5 animate-marquee2 whitespace-nowrap">
+          <div className="absolute flex top-0 py-5 animate-marquee2 whitespace-nowrap">
             <SkillItem imgSkill={Javascript} title="javascript" />
             <SkillItem imgSkill={ReactNative} title="React Native" />
             <SkillItem imgSkill={Nextjs} title="Next Js" />
@@ -48,8 +48,8 @@ export default function Skill() {
           </div>
         </div>
 
-        <div class="relative overflow-x-hidden hidden md:flex">
-          <div class="py-5 flex animate-marquee3 whitespace-nowrap">
+        <div className="relative overflow-x-hidden hidden md:flex">
+          <div className="py-5 flex animate-marquee3 whitespace-nowrap">
             <SkillItem imgSkill={Github} title="Github" />
             <SkillItem imgSkill={Laravel} title="LARAVEL" />
             <SkillItem imgSkill={Nextjs} title="Next Js" />
@@ -60,7 +60,7 @@ export default function Skill() {
             <SkillItem imgSkill={ReactNative} title="React Native" />
           </div>
 
-          <div class="absolute flex top-0 py-5 animate-marquee4 whitespace-nowrap">
+          <div className="absolute flex top-0 py-5 animate-marquee4 whitespace-nowrap">
             <SkillItem imgSkill={Html} title="HTML" />
             <SkillItem imgSkill={Css} title="CSS" />
             <SkillItem imgSkill={Github} title="Github" />

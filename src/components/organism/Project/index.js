@@ -4,6 +4,7 @@ import {
   digiponic,
   foodmarket,
   nagamas,
+  shoesped,
   storegg,
   storeggAdmin,
   vdbAdmin,
@@ -77,6 +78,14 @@ export default function Project() {
       framework: "Laravel",
       imgProject: vdbAdmin,
       projectUrl: "/VdbAdmin",
+      category: "web",
+    },
+    {
+      id: 8,
+      title: "Shoesped",
+      framework: "React JS",
+      imgProject: shoesped,
+      projectUrl: "/Shoesped",
       category: "web",
     },
   ];
