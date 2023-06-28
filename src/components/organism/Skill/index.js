@@ -72,8 +72,15 @@ export default function Skill() {
           </div>
         </div>
 
-        <div className="flex">
-          <SkillGroup />
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pt-5  md:hidden">
+          <SkillItem imgSkill={Javascript} title="javascript" />
+          <SkillItem imgSkill={ReactNative} title="React Native" />
+          <SkillItem imgSkill={Nextjs} title="Next Js" />
+          <SkillItem imgSkill={Tailwind} title="Tailwinds" />
+          <SkillItem imgSkill={Html} title="HTML" />
+          <SkillItem imgSkill={Css} title="CSS" />
+          <SkillItem imgSkill={Github} title="Github" />
+          <SkillItem imgSkill={Laravel} title="LARAVEL" />
         </div>
       </div>
     </div>
